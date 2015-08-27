@@ -26,16 +26,16 @@ class TestBaby(unittest.TestCase):
         data = {"parents": ["Alice", "Bob"],
                 "delivered": "October 1st, 2015"}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = ''
         self.assertEqual(out, expected)
 
     def test_announce_default(self):
         data = {"parents": ["Alice", "Bob"]}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = 'Alice and Bob are excited to announce ' \
                    'the impending arrival of a baby'
         self.assertEqual(out, expected)
@@ -44,8 +44,8 @@ class TestBaby(unittest.TestCase):
         data = {"parents": ["Alice", "Bob"],
                 "sex": "girl"}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = 'Alice and Bob are excited to announce ' \
                    'the impending arrival of a baby girl'
         self.assertEqual(out, expected)
@@ -54,8 +54,8 @@ class TestBaby(unittest.TestCase):
         data = {"parents": ["Alice", "Bob"],
                 "name": "Claire"}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = 'Alice and Bob are excited to announce ' \
                    'the impending arrival of a baby, Claire'
         self.assertEqual(out, expected)
@@ -64,8 +64,8 @@ class TestBaby(unittest.TestCase):
         data = {"parents": ["Alice", "Bob"],
                 "due_date": "January 1st, 2015"}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = 'Alice and Bob are excited to announce ' \
                    'the impending arrival of a baby, due on January 1st, 2015'
         self.assertEqual(out, expected)
@@ -76,8 +76,8 @@ class TestBaby(unittest.TestCase):
                 "name": "Claire",
                 "due_date": "January 1st, 2015"}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._announce()
+        b = Baby(self.url)
+        out = b._announce()
         expected = 'Alice and Bob are excited to announce ' \
                    'the impending arrival of a baby girl, Claire, ' \
                    'due on January 1st, 2015'
@@ -86,13 +86,13 @@ class TestBaby(unittest.TestCase):
     def test_cry(self):
         data = {"parents": ["Alice", "Bob"]}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._cry()
+        b = Baby(self.url)
+        out = b._cry()
         self.assertEqual(out, "waaaaaaaaaaah")
 
     def test_gurgle(self):
         data = {"parents": ["Alice", "Bob"]}
         self._set_data(data)
-        baby = Baby(self.url)
-        out = baby._gurgle()
+        b = Baby(self.url)
+        out = b._gurgle()
         self.assertEqual(out, "gooo gooo")
