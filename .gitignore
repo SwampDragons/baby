@@ -1,0 +1,5 @@
+*.py[o|c]
+*.swp
+.venv/
+.coverage
+nosetests.xml
