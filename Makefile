@@ -16,7 +16,7 @@ default:
 .PHONY: venv setup clean teardown lint test package
 
 $(VENV_ACTIVATE): requirements.txt requirements-dev.txt
-	test -f $@ || virtualenv --python=python2.7 --system-site-packages $(VENV_DIR)
+	test -f $@ || virtualenv --python=python2.7 $(VENV_DIR)
 	$(WITH_VENV) pip install --no-deps -r requirements.txt
 	$(WITH_VENV) pip install --no-deps -r requirements-dev.txt
 	touch $@
