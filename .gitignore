@@ -3,3 +3,7 @@
 .venv/
 .coverage
 nosetests.xml
+
+*.egg-info/
+build/
+dist/
