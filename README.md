@@ -25,7 +25,7 @@ Alice and Bob are excited to announce the impending arrival of a baby
 You can include other information.  Each of the following values are strings so
 feel free to use anything you want here.
 
-- sex: "girl", "boy", "alien"
+- sex: "girl", "boy", "other"
 - name: "Claire", "Dave", ..... good luck, this one's hard
 - due_date: "January 15, 2015" or in unix time "1440646846"
 
